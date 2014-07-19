@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xcu-5d-DcQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Crystal Ball-->
+        <scene sceneID="vg1-T8-R9h">
+            <objects>
+                <viewController id="Xcu-5d-DcQ" customClass="CrystalBall" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Q7-DM-c6x"/>
+                        <viewControllerLayoutGuide type="bottom" id="BTe-Wk-G0Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="seV-6k-hcB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPM-Xk-Ssc">
+                                <rect key="frame" x="211" y="335" width="59" height="30"/>
+                                <state key="normal" title="Tap here, I dare you.">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add New Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xir-I7-Blm">
+                                <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shake for answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF3-nb-eQP">
+                                <rect key="frame" x="94" y="229" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="NPM-Xk-Ssc" firstAttribute="top" secondItem="GF3-nb-eQP" secondAttribute="bottom" constant="85" id="ade-3I-Dpj"/>
+                            <constraint firstAttribute="centerX" secondItem="GF3-nb-eQP" secondAttribute="centerX" constant="-0.5" id="ehZ-5J-bPq"/>
+                            <constraint firstAttribute="centerX" secondItem="NPM-Xk-Ssc" secondAttribute="centerX" constant="-0.5" id="f14-56-gVX"/>
+                            <constraint firstAttribute="centerY" secondItem="GF3-nb-eQP" secondAttribute="centerY" id="flM-jM-b7n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertButton" destination="NPM-Xk-Ssc" id="bjC-AV-Vyb"/>
+                        <outlet property="answerLabel" destination="GF3-nb-eQP" id="F5L-bk-aSQ"/>
+                        <outlet property="newAnswerTextField" destination="Xir-I7-Blm" id="Kgs-ZS-dbv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rVE-TJ-4EU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57" y="-7"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
