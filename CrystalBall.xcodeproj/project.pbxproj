@@ -34,7 +34,6 @@
 		01009980197AD0D4005D6B6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01009981197AD0D4005D6B6C /* CrystalBallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrystalBallTests.swift; sourceTree = "<group>"; };
 		0100998B197AD10F005D6B6C /* CrystalBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrystalBall.swift; sourceTree = "<group>"; };
-		01FE96C7197AD909008546F0 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +77,6 @@
 			children = (
 				0100996E197AD0D4005D6B6C /* AppDelegate.swift */,
 				01009972197AD0D4005D6B6C /* Main.storyboard */,
-				01FE96C7197AD909008546F0 /* MyPlayground.playground */,
 				0100998B197AD10F005D6B6C /* CrystalBall.swift */,
 				01009975197AD0D4005D6B6C /* Images.xcassets */,
 				0100996C197AD0D4005D6B6C /* Supporting Files */,

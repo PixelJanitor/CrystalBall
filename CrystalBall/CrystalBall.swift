@@ -36,7 +36,7 @@ class CrystalBall: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         var newAnswer = textField.text
         answers.append(newAnswer)
-        textField.text = ""
+        textField.text = nil
         textField.resignFirstResponder()
         return false
     }
