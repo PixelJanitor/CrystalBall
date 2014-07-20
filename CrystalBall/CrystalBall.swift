@@ -51,8 +51,8 @@ class CrystalBall: UIViewController, UITextFieldDelegate {
     }
     
     func showAlert() {
-        var alert = UIAlertController(title: "Answer", message: randomAnswer(), preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+        var alert = UIAlertController(title: "The answer is", message: randomAnswer(), preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Default, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
     }
     
