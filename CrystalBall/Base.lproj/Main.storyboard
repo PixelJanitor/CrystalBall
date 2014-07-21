@@ -16,11 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add New Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xir-I7-Blm">
-                                <rect key="frame" x="63" y="205" width="194" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake for answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF3-nb-eQP">
                                 <rect key="frame" x="93" y="113" width="134" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -29,16 +24,18 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPM-Xk-Ssc">
                                 <rect key="frame" x="49" y="303" width="223" height="30"/>
-                                <state key="normal" title="Tap here, I dare you.">
+                                <state key="normal" title="Add Answer">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showAlert:" destination="Xcu-5d-DcQ" eventType="touchUpInside" id="zYY-8Z-pyO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NPM-Xk-Ssc" firstAttribute="top" secondItem="GF3-nb-eQP" secondAttribute="bottom" constant="169" id="ade-3I-Dpj"/>
-                            <constraint firstItem="NPM-Xk-Ssc" firstAttribute="top" secondItem="Xir-I7-Blm" secondAttribute="bottom" constant="68" id="dXt-LQ-4Ve"/>
                             <constraint firstAttribute="centerX" secondItem="GF3-nb-eQP" secondAttribute="centerX" constant="-0.5" id="ehZ-5J-bPq"/>
                             <constraint firstAttribute="centerX" secondItem="NPM-Xk-Ssc" secondAttribute="centerX" constant="-0.5" id="f14-56-gVX"/>
                             <constraint firstAttribute="centerY" secondItem="GF3-nb-eQP" secondAttribute="centerY" constant="116.5" id="flM-jM-b7n"/>
@@ -47,7 +44,6 @@
                     <connections>
                         <outlet property="alertButton" destination="NPM-Xk-Ssc" id="bjC-AV-Vyb"/>
                         <outlet property="answerLabel" destination="GF3-nb-eQP" id="F5L-bk-aSQ"/>
-                        <outlet property="newAnswerTextField" destination="Xir-I7-Blm" id="Kgs-ZS-dbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVE-TJ-4EU" userLabel="First Responder" sceneMemberID="firstResponder"/>

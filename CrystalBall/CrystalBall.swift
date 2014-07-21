@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CrystalBall: UIViewController, UITextFieldDelegate {
+class CrystalBall: UIViewController, UIAlertViewDelegate {
 
     @IBOutlet var newAnswerTextField : UITextField
     @IBOutlet var alertButton : UIButton
@@ -18,9 +18,6 @@ class CrystalBall: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var buttonTap = UITapGestureRecognizer(target: self, action: "showAlert")
-        self.alertButton.addGestureRecognizer(buttonTap)
-        newAnswerTextField.delegate = self
     }
     
     override func canBecomeFirstResponder() -> Bool {
@@ -33,13 +30,14 @@ class CrystalBall: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        var newAnswer = textField.text
-        answers.append(newAnswer)
-        textField.text = ""
-        textField.resignFirstResponder()
-        return false
+    func alertView(alertView: UIAlertView!, didDismissWithButtonIndex buttonIndex: Int) {
+        if (buttonIndex == 1) {
+            var newAnswer = alertView.textFieldAtIndex(0).text
+            answers.append(newAnswer)
+        }
+        
     }
+
     
     func randomAnswer() -> String {
         var randomAnswerIndex = arc4random_uniform(UInt32(answers.count))
@@ -50,10 +48,10 @@ class CrystalBall: UIViewController, UITextFieldDelegate {
         answerLabel.text = randomAnswer()
     }
     
-    func showAlert() {
-        var alert = UIAlertController(title: "Answer", message: randomAnswer(), preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-        presentViewController(alert, animated: true, completion: nil)
+    @IBAction func showAlert(sender: AnyObject) {
+        var alert = UIAlertView(title: "Add Answer", message: "Add a New Answer", delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "Add Answer")
+        alert.alertViewStyle = UIAlertViewStyle.PlainTextInput
+        alert.show()
     }
     
 }
